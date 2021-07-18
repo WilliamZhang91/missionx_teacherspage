@@ -1,0 +1,30 @@
+.layout {
+    width: 80vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.buttonIndividual {
+    border-radius: 5px;
+    background-color: blue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+
+    padding: 0, 10px; 
+}
+
+.takeScreenshot {
+    background-color: #d98d00
+}
+
+.helpCenter {
+    background-color: #ff008a
+}
+
+.moreProjects {
+    background-color: #00b9ff
+}
