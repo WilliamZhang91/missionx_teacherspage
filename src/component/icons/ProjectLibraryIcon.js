@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > svg': {
       margin: theme.spacing(0),
-      //fontSize: '3.5vh',
+      fontSize: '3.5vh',
       width: '3.5vw'
     },
   },

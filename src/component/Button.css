@@ -1,4 +1,4 @@
-.layout {
+.layoutButton {
     width: 80vw;
     display: flex;
     justify-content: flex-end;
@@ -13,18 +13,33 @@
     text-align: center;
     text-decoration: none;
     font-size: 15px;
-
-    padding: 0, 10px; 
+    padding: 0 10px; 
+    position: relative;
+    top: -6px;
 }
 
 .takeScreenshot {
-    background-color: #d98d00
+    background-color: #d98d00;
+    right: 20px;
 }
 
 .helpCenter {
-    background-color: #ff008a
+    background-color: #ff008a;
+    right: 10px;
 }
 
 .moreProjects {
     background-color: #00b9ff
+}
+
+@media all and (max-width: 440px) {
+    .takeScreenshot {
+        font-size: 10px;
+    }
+    .helpCenter {
+        font-size: 10px;
+    }
+    .moreProjects {
+        font-size: 10px;
+    }
 }

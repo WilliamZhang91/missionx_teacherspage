@@ -10,9 +10,8 @@ export default function StudentProfiles() {
         axios.get('http://localhost:4000/user')
             .then(response => {
                 setUsers(response.data)
-
             })
-    })
+    }, [])
 
     return (
         <div className={'flex-container'}>

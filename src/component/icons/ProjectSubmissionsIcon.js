@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > svg': {
       margin: theme.spacing(0),
-      width: '3.5vw'
+      width: '3.5vw',
+      height: '3.5vh',
     },
   },
 }));

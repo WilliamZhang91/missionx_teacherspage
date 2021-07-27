@@ -9,7 +9,10 @@ import StudentProfileIcon from './icons/StudentProfileIcon';
 import HelpRequestIcon from './icons/HelpRequestsIcon';
 import ProjectSubmissionsIcon from './icons/ProjectSubmissionsIcon';
 import ProjectLibraryIcon from './icons/ProjectLibraryIcon';
+import AccountCircleIcon from './icons/AccountCircleIcon';
+import SettingsIcon from './icons/SettingsIcon';
 import StudentProfiles from './innercard/StudentProfiles';
+import StudentTracker from './innercard/StudentTracker';
 import Ellipse from './images/Ellipse.png'
 
 
@@ -20,6 +23,7 @@ export default function Tab() {
     const [isDisplayed, setIsDisplayed] = useState('block') //righticon is set to display block on open of drawer/on page first load
     const [notDisplayed, setNotDisplayed] = useState('none') //lefticon is set to display none on close of drawer
     const [tabDescription, setTabDescription] = useState('none')//tab description is set to display none on first page load
+    const [bottomIcons, setBottomIcons] = useState('bottomIconGroup')
 
 
     const toggleTab = (number) => {
@@ -58,7 +62,11 @@ export default function Tab() {
 
                 <div>
                     <div style={{ display: 'flex', justifyContent: 'flex-end', position: 'relative', top: '2vh', }}><span style={{ display: notDisplayed }} onClick={toggleDrawerClose}><LeftArrowIcon /></span></div>
-                    <div style={{ display: 'flex', justifyContent: 'flex-start', position: 'relative', top: '20vh', }}><span style={{ display: isDisplayed }} onClick={toggleDrawerOpen}><RightArrowIcon /></span></div>
+                    <div style={{ display: 'flex', justifyContent: 'flex-start', position: 'relative', top: '15vh', }}><span style={{ display: isDisplayed }} onClick={toggleDrawerOpen}><RightArrowIcon /></span></div>
+                </div>
+
+                <div className={bottomIcons}>
+
                 </div>
 
             </div>
@@ -67,6 +75,7 @@ export default function Tab() {
                 <div id='content' className={state === 1 ? "active cardIndividual" : "cardIndividual"}>
                     <div className="button"><Button /></div>
                     <div className='innerCard'>
+                    <StudentTracker />
                     </div>
                 </div>
                 <div id='content' className={state === 2 ? "active cardIndividual" : "cardIndividual"}>
@@ -75,9 +84,9 @@ export default function Tab() {
                     <StudentProfiles />
                     </div>
                 </div>
-                <div id='content' className={state === 3 ? "active cardIndividual" : "cardIndividual"}>today</div>
-                <div id='content' className={state === 4 ? "active cardIndividual" : "cardIndividual"}>tomorrow</div>
-                <div id='content' className={state === 5 ? "active cardIndividual" : "cardIndividual"}>dead</div>
+                <div id='content' className={state === 3 ? "active cardIndividual" : "cardIndividual"}></div>
+                <div id='content' className={state === 4 ? "active cardIndividual" : "cardIndividual"}></div>
+                <div id='content' className={state === 5 ? "active cardIndividual" : "cardIndividual"}></div>
             </div>
 
         </div>
